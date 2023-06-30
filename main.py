@@ -31,22 +31,24 @@ def menu_principal():
         print("(2) Opción 2")
         print("(3) Opción 3")
         print("(S) Salir del sistema")
-        
+
         opcion = input("Selecciona una opción: ")
-        if opcion == '1':
-            print("Seleccionada la opción 1")
-            esperar()
-        elif opcion == '2':
-            print("Seleccionada la opción 2")
-            esperar()
-        elif opcion == '3':
-            print("Seleccionada la opción 3")
-            esperar()
-        elif opcion.upper() == 'S':
-            print("Seleccionada la opción Salir")
-            break
-        else:
-            print("Opción inválida. Inténtalo nuevamente.")
-            esperar()
+        match(opcion):
+            case "1":
+                print("Seleccionada la opción 1")
+                esperar()
+            case "2":
+                print("Seleccionada la opción ")
+                esperar()
+            case "3":
+                print("Seleccionada la opción 3")
+                esperar()
+            case "S" | "s":
+                print("Seleccionada la opción Salir")
+                esperar()
+                break
+            case _:
+                print("Opción inválida. Inténtalo nuevamente.")
+                esperar()
 
 menu_principal()
